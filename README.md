@@ -45,5 +45,5 @@ Save simple data with SharedPreferences
 
 ## Support
 
-For support, email peaceunique2003@gmail.com.com 
+For support, email peaceunique2003@gmail.com
 
