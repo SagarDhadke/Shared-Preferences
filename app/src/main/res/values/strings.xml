@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Shared Preferences</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="accept_terms_condition"><![CDATA[Accept terms & Condition]]></string>
 </resources>

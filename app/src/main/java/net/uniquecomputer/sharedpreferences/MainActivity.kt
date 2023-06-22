@@ -11,6 +11,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val editor = getSharedPreferences("My_Login", MODE_PRIVATE)
+        binding.signInEmail.setText(editor.getString("email",null))
+        binding.signInPassword.setText(editor.getString("password",null))
+
+        binding.signInBtn.setOnClickListener {
+
+            val editor = getSharedPreferences("My_Login", MODE_PRIVATE).edit()
+            editor.putString("email",binding.signInEmail.text.toString())
+            editor.putString("password",binding.signInPassword.text.toString())
+            editor.apply()
+
+        }
 
     }
 }
