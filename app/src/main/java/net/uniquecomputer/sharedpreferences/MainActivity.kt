@@ -1,5 +1,6 @@
 package net.uniquecomputer.sharedpreferences
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import net.uniquecomputer.sharedpreferences.databinding.ActivityMainBinding
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             editor.putString("email",binding.signInEmail.text.toString())
             editor.putString("password",binding.signInPassword.text.toString())
             editor.apply()
+            startActivity(Intent(this,ShowData::class.java))
 
         }
 
