@@ -15,12 +15,20 @@ class MainActivity : AppCompatActivity() {
         val editor = getSharedPreferences("My_Login", MODE_PRIVATE)
         binding.signInEmail.setText(editor.getString("email",null))
         binding.signInPassword.setText(editor.getString("password",null))
+        binding.signInCheckbox.isChecked = editor.getBoolean("checked",false)
+
+        binding.signInForgetPass.setOnClickListener {
+
+            startActivity(Intent(this,ForgetPassword::class.java))
+
+        }
 
         binding.signInBtn.setOnClickListener {
 
             val editor = getSharedPreferences("My_Login", MODE_PRIVATE).edit()
             editor.putString("email",binding.signInEmail.text.toString())
             editor.putString("password",binding.signInPassword.text.toString())
+            editor.putBoolean("checked",binding.signInCheckbox.isChecked)
             editor.apply()
             startActivity(Intent(this,ShowData::class.java))
 
