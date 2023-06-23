@@ -11,12 +11,12 @@ Save simple data with SharedPreferences
 
 ## Clone This Project
 
-```http
+```bash
   https://github.com/SagarDhadke/Shared-Preferences.git
 ```
 #### My_Login file name and Store Mod in MODE_PRIVATE
 
-```http
+```bash
  val editor = getSharedPreferences("My_Login", MODE_PRIVATE)
 
  binding.signInEmail.setText(editor.getString("email",null))
@@ -25,7 +25,7 @@ Save simple data with SharedPreferences
 
 #### Save All Data in Shared Preferences
 
-```http
+```bash
             val editor = getSharedPreferences("My_Login", MODE_PRIVATE).edit()
             editor.putString("email",binding.signInEmail.text.toString())
             editor.putString("password",binding.signInPassword.text.toString())
